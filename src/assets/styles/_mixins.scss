@@ -1,0 +1,53 @@
+@mixin reset-list-styles() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin transition($transition: all, $duration: 0.2s, $timing: ease-in-out){
+  will-change: $transition;
+  transition: $transition $duration $timing;
+}
+
+@mixin displayFlex($direction: row, $justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+
+
+
+
+
+
+@mixin screenSmall {
+  @media (max-width: #{$screenSmall}) {
+    @content;
+  }
+}
+
+@mixin screenMedium {
+  @media (max-width: #{$screenMedium}) {
+    @content;
+  }
+}
+
+@mixin screenLarge {
+  @media (max-width: #{$screenLarge}) {
+    @content;
+  }
+}
+
+@mixin screenExtraLarge {
+  @media (min-width: #{$screenExtraLarge}) {
+    @content;
+  }
+}
+
+@mixin screenCustom($pixels) {
+  @media (max-width: $pixels+'px') {
+    @content;
+  }
+}

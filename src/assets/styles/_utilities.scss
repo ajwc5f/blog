@@ -1,0 +1,23 @@
+.--bold {
+  font-weight: 700;
+}
+
+.--light {
+  font-weight: 200;
+}
+
+.--italic {
+  font-style: italic;
+}
+
+.--no-margin {
+  margin: 0;
+}
+
+.--subtle {
+  text-decoration: none;
+}
+
+ul.--no-style {
+  @include reset-list-styles;
+}
