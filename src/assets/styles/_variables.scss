@@ -1,15 +1,27 @@
 /* Colors */
+$primary: #151519;
+$primaryAlt: #5c5d63;
+$gray: #bbbbbb;
+$red: #ea4848;
+$blue: #5781e4;
+$green: #46a746;
+$orange: #ffbe00;
+
 
 /* Fonts */
-////$fontMain: 'Overpass', sans-serif;
-////$fontAccent: cursive;
+$fontMain: 'Source Sans Pro', cursive;
+$fontAccent: 'Krona One', sans-serif;
 
 /* Shadows */
 
 /* Sizing */
 
 /* Padding/Margin/Gaps */
-
+$gapVerySmall: 0.25em;
+$gapSmall: 0.5em;
+$gapStandard: 1.25em;
+$gapLarge: 2.5em;
+$gapVeryLarge: 4em;
 
 
 /* Media Queries */
