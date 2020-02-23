@@ -1,5 +1,5 @@
 <template>
-  <h1 class="logo">
+  <h2 class="logo">
     <router-link to="/">
       <span
         v-for="letter in logoLetters"
@@ -9,7 +9,7 @@
         >{{ letter.toUpperCase() }}</span
       >
     </router-link>
-  </h1>
+  </h2>
 </template>
 
 <script>

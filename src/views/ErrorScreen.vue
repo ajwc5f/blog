@@ -1,7 +1,5 @@
 <template>
-  <section class="error-screen">
-    404
-  </section>
+  <section class="error-screen"></section>
 </template>
 
 <script>

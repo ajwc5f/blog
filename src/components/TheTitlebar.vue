@@ -29,6 +29,16 @@
           class="titlebar__router-link --subtle"
           v-html="link.content"
         />
+        <component
+          v-if="link.hoverScribble !== null"
+          :key="key + '_titlebar_link_scribble'"
+          :is="link.hoverScribble"
+          class="titlebar__link-scribble"
+          :class="{
+            '--shown':
+              $route.path === link.route || link.class === currentRouteClass
+          }"
+        />
       </div>
     </nav>
   </header>
@@ -36,6 +46,10 @@
 
 <script>
 import AppLogo from "./AppLogo";
+import ScribbleTitlebarRed from "./Graphics/ScribbleTitlebarRed";
+import ScribbleTitlebarBlue from "./Graphics/ScribbleTitlebarBlue";
+import ScribbleTitlebarOrange from "./Graphics/ScribbleTitlebarOrange";
+import ScribbleTitlebarGreen from "./Graphics/ScribbleTitlebarGreen";
 
 export default {
   name: "TheTitlebar",
@@ -51,31 +65,36 @@ export default {
           content: '<i class="far fa-head-side"></i>',
           href: "http://arenwells.com",
           route: "",
-          class: "red"
+          class: "red",
+          hoverScribble: ScribbleTitlebarRed
         },
         archive: {
           type: "router-link",
           content: "archive",
           route: "/archive",
-          class: "blue"
+          class: "blue",
+          hoverScribble: ScribbleTitlebarBlue
         },
         logo: {
           type: "component",
           content: AppLogo,
           class: "gray",
-          route: "/"
+          route: "/",
+          hoverScribble: null
         },
         contact: {
           type: "router-link",
           content: "contact",
           route: "/contact",
-          class: "orange"
+          class: "orange",
+          hoverScribble: ScribbleTitlebarOrange
         },
         search: {
           type: "router-link",
           content: '<i class="far fa-search"></i>',
           route: "/search",
-          class: "green"
+          class: "green",
+          hoverScribble: ScribbleTitlebarGreen
         }
       }
     };
@@ -119,11 +138,12 @@ export default {
   height: $headerSize;
   z-index: 20;
   font-family: $fontAccent;
+  background: $base;
   border-top: 6px solid $gray;
   @include transition(border-top);
 
   &.--gray {
-    border-top: 6px solid $gray;
+    border-top: 6px solid $base;
   }
 
   &.--red {
@@ -143,8 +163,10 @@ export default {
   }
 
   .titlebar__nav {
+    @include displayFlex(row);
+
     .titlebar__link-container {
-      display: inline-block;
+      position: relative;
       margin: 0 $gapLarge;
       color: $primaryAlt;
       font-size: 1em;
@@ -157,9 +179,54 @@ export default {
 
       .titlebar__router-link {
         @include transition(color);
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
 
         &:hover {
           color: $primary;
+        }
+      }
+
+      .titlebar__link-scribble {
+        opacity: 0;
+        @include transition(opacity);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        &.--shown {
+          opacity: 1;
+        }
+
+        &.--red {
+          left: -16px;
+          top: -11px;
+          width: 51px;
+          height: 45px;
+        }
+
+        &.--blue {
+          width: 70px;
+          top: -10px;
+          left: 6px;
+        }
+
+        &.--orange {
+          width: 84px;
+          height: 45px;
+          top: -3px;
+          left: 3px;
+        }
+
+        &.--green {
+          left: -11px;
+          top: -9px;
+          width: 45px;
+          height: 45px;
         }
       }
     }

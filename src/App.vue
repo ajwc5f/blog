@@ -2,7 +2,7 @@
   <div id="app">
     <TheTitlebar />
     <div class="app__content">
-      <transition appear name="fade-slow" mode="out-in">
+      <transition appear name="fade" mode="out-in">
         <router-view />
       </transition>
     </div>

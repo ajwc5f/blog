@@ -1,11 +1,12 @@
 /* Colors */
+$base: #fff;
 $primary: #151519;
 $primaryAlt: #5c5d63;
 $gray: #bbbbbb;
 $red: #ea4848;
 $blue: #5781e4;
-$green: #46a746;
 $orange: #ffbe00;
+$green: #46a746;
 
 
 /* Fonts */
@@ -16,6 +17,7 @@ $fontAccent: 'Krona One', sans-serif;
 
 /* Sizing */
 $headerSize: 80px;
+$fullScreenHeight: calc(100vh - #{$headerSize});
 
 /* Padding/Margin/Gaps */
 $gapVerySmall: 0.25em;
