@@ -1,14 +1,16 @@
 <template>
   <div id="app">
     <TheTitlebar />
-    <transition appear name="fade-slow" mode="out-in">
-      <router-view />
-    </transition>
+    <div class="app__content">
+      <transition appear name="fade-slow" mode="out-in">
+        <router-view />
+      </transition>
+    </div>
   </div>
 </template>
 
 <script>
-import TheTitlebar from "./components/The/TheTitlebar";
+import TheTitlebar from "./components/TheTitlebar";
 
 export default {
   components: {
@@ -17,4 +19,10 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+#app {
+  .app__content {
+    margin-top: $headerSize;
+  }
+}
+</style>

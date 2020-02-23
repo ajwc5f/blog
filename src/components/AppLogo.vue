@@ -26,6 +26,7 @@ export default {
 <style scoped lang="scss">
 .logo {
   @include accentFont;
+  margin: 0;
 
   .logo__letter {
     display: inline-block;
