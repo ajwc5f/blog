@@ -1,10 +1,11 @@
 <template>
   <section class="home">
     <div class="home__text">
-      <h1>
-        A blog by Aren Wells.
+      <h1 class="home__header">
+        A blog by <span class="home__underline --aren">Aren Wells</span>.
         <br />
-        For Whomever.
+        <br />
+        For <span class="home__underline --whomever">Whomever</span>.
       </h1>
     </div>
   </section>
@@ -20,10 +21,24 @@ export default {
 .home {
   @include displayFlex(column, center, center);
   height: $fullScreenHeight;
-  font-family: $fontAccent;
+  @include accentFont;
 
   .home__text {
     text-align: center;
+
+    .home__header {
+      .home__underline {
+        cursor: context-menu;
+
+        &.--aren {
+          @include underline($blue);
+        }
+
+        &.--whomever {
+          @include underline($orange);
+        }
+      }
+    }
   }
 }
 </style>

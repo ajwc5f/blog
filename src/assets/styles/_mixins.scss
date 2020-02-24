@@ -23,6 +23,10 @@
   letter-spacing: 1.5px;
 }
 
+@mixin underline($color: $blue) {
+  border-bottom: 3px solid $color;
+}
+
 
 
 @mixin screenSmall {

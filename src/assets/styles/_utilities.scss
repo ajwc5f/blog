@@ -11,7 +11,7 @@
 }
 
 .--font-accent {
-  font-family: $fontAccent;
+  @include accentFont;
 }
 
 .--color-priamry {
