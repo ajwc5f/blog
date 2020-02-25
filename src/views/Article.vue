@@ -25,27 +25,24 @@
         />
       </div>
     </header>
-    <div class="article__content">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu est
-        ante. In lacinia, nulla sed euismod vehicula, est leo tristique nisl, at
-        fringilla purus nisi et risus. Sed vulputate sem a pulvinar eleifend.
-        Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec ultricies commodo eros, vel convallis erat semper
-        id. Aliquam erat volutpat. Phasellus mattis, sem elementum lobortis
-        interdum, lorem arcu euismod lectus, non malesuada mi eros vitae enim.
-        Aenean a scelerisque magna, congue sodales odio. Fusce feugiat pretium
-        metus et mattis. Curabitur diam dui, egestas varius pellentesque vel,
-        pellentesque vitae eros. Mauris finibus tortor felis, sit amet rutrum
-        augue laoreet nec. Vestibulum tincidunt nulla metus, sit amet varius
-        risus placerat eu. In hac habitasse platea dictumst. Nunc eu velit
-        varius, lacinia augue ut, consequat ex. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. Integer in vulputate leo. Suspendisse non
-        dolor et sem eleifend pharetra vitae a elit. Etiam a dolor finibus,
-        tempor dui quis, eleifend leo. Morbi metus risus, vestibulum et dapibus
-        et, lobortis eget arcu.
-      </p>
-    </div>
+    <p class="article__content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu est
+      ante. In lacinia, nulla sed euismod vehicula, est leo tristique nisl, at
+      fringilla purus nisi et risus. Sed vulputate sem a pulvinar eleifend. Orci
+      varius natoque penatibus et magnis dis parturient montes, nascetur
+      ridiculus mus. Donec ultricies commodo eros, vel convallis erat semper id.
+      Aliquam erat volutpat. Phasellus mattis, sem elementum lobortis interdum,
+      lorem arcu euismod lectus, non malesuada mi eros vitae enim. Aenean a
+      scelerisque magna, congue sodales odio. Fusce feugiat pretium metus et
+      mattis. Curabitur diam dui, egestas varius pellentesque vel, pellentesque
+      vitae eros. Mauris finibus tortor felis, sit amet rutrum augue laoreet
+      nec. Vestibulum tincidunt nulla metus, sit amet varius risus placerat eu.
+      In hac habitasse platea dictumst. Nunc eu velit varius, lacinia augue ut,
+      consequat ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Integer in vulputate leo. Suspendisse non dolor et sem eleifend pharetra
+      vitae a elit. Etiam a dolor finibus, tempor dui quis, eleifend leo. Morbi
+      metus risus, vestibulum et dapibus et, lobortis eget arcu.
+    </p>
   </section>
 </template>
 
@@ -98,6 +95,11 @@ export default {
 
   .article__image-content {
     width: 100%;
+  }
+
+  .article__content {
+    line-height: 1.5rem;
+    letter-spacing: 0.2px;
   }
 }
 </style>
