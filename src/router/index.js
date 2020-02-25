@@ -11,6 +11,11 @@ const routes = [
     component: Home
   },
   {
+    path: "/archive",
+    name: "archive",
+    component: () => import("../views/Article.vue")
+  },
+  {
     path: "*",
     name: "404",
     component: () => import("../views/ErrorScreen.vue")

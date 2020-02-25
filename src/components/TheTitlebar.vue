@@ -163,7 +163,8 @@ export default {
   }
 
   .titlebar__nav {
-    @include displayFlex(row);
+    @include displayFlex(row, space-between, center);
+    width: 100%;
 
     .titlebar__link-container {
       position: relative;
