@@ -1,3 +1,12 @@
+<!-- Features:
+ - Article read time.
+ - Progress bar.
+ - Share Links.
+ - Ads.
+ - Related/more articles.
+ -
+-->
+
 <template>
   <div id="app">
     <TheTitlebar />
